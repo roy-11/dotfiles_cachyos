@@ -71,6 +71,24 @@
       create: true
       path: Taskfile.yml
 
+    # cachyos
+    ~/.config/elephant/snippets.toml:
+      create: true
+      force: true
+      path: cachyos/elephant/snippets.toml
+    /etc/keyd/default.conf: # (sudo権限が必要)
+      create: true
+      force: true
+      path: cachyos/keyd/default.conf
+    ~/.config/hypr/custom/keybinds.conf:
+      create: true
+      force: true
+      path: cachyos/hypr/keybinds.conf
+    ~/.config/fontconfig/conf.d:
+      create: true
+      force: true
+      path: cachyos/fontconfig/conf.d
+
 - shell:
     - command: ./setup_fish.sh
       stdout: true

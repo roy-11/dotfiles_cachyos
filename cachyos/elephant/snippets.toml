@@ -1,0 +1,20 @@
+# ~/.config/elephant/snippets.toml
+
+# デフォルトは wtype を使って入力
+command = "wtype %CONTENT%"
+delay = 100
+
+# ---- スニペット定義 ----
+
+[[snippets]]
+keywords = ["thanks", "arigato", "thankyou"]
+name = "お礼"
+content = "ご確認ありがとうございます！"
+
+[[snippets]]
+keywords = ["review", "pr"]
+name = "PRレビュー依頼文"
+content = """
+お手隙の際にご確認いただけますと幸いです。
+修正内容は以下になります！
+"""
