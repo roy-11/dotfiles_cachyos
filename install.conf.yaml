@@ -6,7 +6,7 @@
     # shell
     ~/.aliases: common/aliases
     ~/.variables: common/variables
-    ~/.zshrc: zsh/zshrc
+    # ~/.zshrc: zsh/zshrc
     ~/.config/fish/config.fish:
       create: true
       path: fish/config.fish
@@ -21,26 +21,17 @@
     ~/.config/nvim.lazy/lua:
       create: true
       path: app/nvim/lua/lazy
-    ~/.config/nvim.my-settings/lua:
-      create: true
-      path: app/nvim/lua/my-settings
-    ~/.config/nvim.astro/lua/user:
-      create: true
-      path: app/nvim/lua/astro/user
-    ~/.config/nvim.vscode/init.vim:
-      create: true
-      path: app/vscode/vim/init.vim
 
     # tmux, terminal
     ~/.tmux.conf:
       create: true
       path: app/tmux/tmux.conf
-    ~/.config/kitty:
+    ~/.config/kitty/kitty.conf:
       create: true
-      path: app/kitty
-    /usr/local/bin/imgcat:
-      create: true
-      path: app/iterm2/imgcat # iterm2上で画像を表示(sudo権限が必要)
+      path: app/kitty/kitty.conf
+    # /usr/local/bin/imgcat:
+    #   create: true
+    #   path: app/iterm2/imgcat # iterm2上で画像を表示(sudo権限が必要)
 
     # git
     ~/.gitconfig:
@@ -56,15 +47,12 @@
     ~/.claude/settings.local.json:
       create: true
       path: app/claude/settings.local.json
-    ~/Library/Application Support/Claude/claude_desktop_config.json:
-      create: true
-      path: app/claude/claude_desktop_config.json
+    # ~/Library/Application Support/Claude/claude_desktop_config.json:
+    #   create: true
+    #   path: app/claude/claude_desktop_config.json
     ~/.claude/CLAUDE.md:
       create: true
       path: app/claude/CLAUDE.md
-    ~/.aider.conf.yml:
-      create: true
-      path: app/aider/aider.conf.yml
     ~/.config/mcphub/servers.json:
       create: true
       path: app/mcphub/servers.json
@@ -73,42 +61,9 @@
       path: app/cursor/mcp.json
 
     # others
-    ~/.config/karabiner:
-      create: true
-      path: app/karabiner
-    ~/.config/yabai:
-      create: true
-      path: app/yabai
-    ~/.config/aerospace:
-      create: true
-      path: app/aerospace
-    ~/.config/skhd:
-      create: true
-      path: app/skhd
-    ~/.config/sketchybar:
-      create: true
-      path: app/sketchybar
-    ~/.config/cava:
-      create: true
-      path: app/cava
-    ~/.config/ranger:
-      create: true
-      path: app/ranger
-    ~/.config/.stylua.toml:
-      create: true
-      path: .stylua.toml
-    ~/.config/shell_gpt:
-      create: true
-      path: app/shellgpt
-    ~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/.obsidian.vimrc:
-      create: true
-      path: app/obsidian/.obsidian.vimrc
     ~/.config/bat:
       create: true
       path: app/bat
-    ~/.hammerspoon:
-      create: true
-      path: app/hammerspoon
     ~/.config/btop:
       create: true
       path: app/btop
@@ -117,18 +72,9 @@
       path: Taskfile.yml
 
 - shell:
-    - command: ./setup_homebrew.sh
-      stdout: true
-      stderr: true
     - command: ./setup_fish.sh
       stdout: true
       stderr: true
     - command: ./setup_node.sh
-      stdout: true
-      stderr: true
-    - command: ./setup_macos.sh
-      stdout: true
-      stderr: true
-    - command: ./setup_python.sh
       stdout: true
       stderr: true

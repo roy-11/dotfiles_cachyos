@@ -1,13 +1,13 @@
 # ls
 alias l="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 alias ls="eza -lah -F --git --icons=always"
-alias tree='~/.dotfiles/common/scripts.sh tree'
+alias tree='~/.dotfiles_cachyos/common/scripts.sh tree'
 
 # git
 alias gs='git status'
 alias gd='git diff'
 alias gdc='git diff --cached'
-alias gl='~/.dotfiles/common/scripts.sh gl'
+alias gl='~/.dotfiles_cachyos/common/scripts.sh gl'
 alias gcz='git-cz --disable-emoji'
 alias lg='lazygit'
 
@@ -38,8 +38,8 @@ alias ta='tmux a'
 alias tk='tmux kill-server'
 
 # setup ide or project window 
-alias ide='~/.dotfiles/common/scripts.sh ide'
-alias michi='~/.dotfiles/common/scripts.sh michi'
+alias ide='~/.dotfiles_cachyos/common/scripts.sh ide'
+alias michi='~/.dotfiles_cachyos/common/scripts.sh michi'
 
 # docker
 alias ld='lazydocker'

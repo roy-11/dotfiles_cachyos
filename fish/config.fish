@@ -5,31 +5,33 @@ source ~/.variables
 # グリーティングメッセージを無効
 set -U fish_greeting
 
-# homebrew
-eval (/opt/homebrew/bin/brew shellenv)
-
-# nodenv
-eval (nodenv init - | source)
-
-# pyenv
-eval (pyenv init - | source)
-
 # fzf
 fzf --fish | source
 fzf_configure_bindings --processes=\cp
 
-# the fuck
-thefuck --alias fk | source
+function fish_prompt -d "Write out the prompt"
+    # This shows up as USER@HOST /home/user/ >, with the directory colored
+    # $USER and $hostname are set by fish, so you can just use them
+    # instead of using `whoami` and `hostname`
+    printf '%s@%s %s%s%s > ' $USER $hostname \
+        (set_color $fish_color_cwd) (prompt_pwd) (set_color normal)
+end
 
 if status is-interactive
     # starship
     starship init fish | source
+    # https://github.com/end-4/dots-hyprland/discussions/1151#discussioncomment-14113829
+    if not set -q TMUX
+        if test -f ~/.local/state/quickshell/user/generated/terminal/sequences.txt
+            cat ~/.local/state/quickshell/user/generated/terminal/sequences.txt
+        end
+    end
 end
 
-# Added by OrbStack: command-line tools and integration
-# This won't be added again if you remove it.
-source ~/.orbstack/shell/init2.fish 2>/dev/null || :
+# Add ~/.local/bin to PATH
+if test -d "$HOME/.local/bin"
+    fish_add_path $HOME/.local/bin
+end
 
-# Added by LM Studio CLI (lms)
-set -gx PATH $PATH $HOME/.lmstudio/bin
-# End of LM Studio CLI section
+# mise setting
+~/.local/bin/mise activate fish | source
