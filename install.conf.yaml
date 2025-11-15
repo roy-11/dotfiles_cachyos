@@ -1,6 +1,7 @@
 - defaults:
     link:
       relink: true
+      create: true
 
 - link:
     # shell
@@ -8,26 +9,20 @@
     ~/.variables: common/variables
     # ~/.zshrc: zsh/zshrc
     ~/.config/fish/config.fish:
-      create: true
       path: fish/config.fish
     ~/.config/fish/functions/fish_user_key_bindings.fish:
-      create: true
       path: fish/functions/fish_user_key_bindings.fish
 
     # nvim, tmux, terminal
     ~/.config/nvim:
-      create: true
       path: ~/.config/nvim.lazy # 使用するnvim設定を切り替え
     ~/.config/nvim.lazy/lua:
-      create: true
       path: app/nvim/lua/lazy
 
     # tmux, terminal
     ~/.tmux.conf:
-      create: true
       path: app/tmux/tmux.conf
     ~/.config/kitty/kitty.conf:
-      create: true
       path: app/kitty/kitty.conf
     # /usr/local/bin/imgcat:
     #   create: true
@@ -36,56 +31,44 @@
     # git
     ~/.gitconfig:
     ~/.gitignore_global:
-    ~/Library/Application Support/lazygit/config.yml:
-      force: true
-      path: app/lazygit/config.yml
+    # ~/Library/Application Support/lazygit/config.yml:
+    #   force: true
+    #   path: app/lazygit/config.yml
 
     # ai
     ~/.claude/settings.json:
-      create: true
       path: app/claude/settings.json
     ~/.claude/settings.local.json:
-      create: true
       path: app/claude/settings.local.json
     # ~/Library/Application Support/Claude/claude_desktop_config.json:
     #   create: true
     #   path: app/claude/claude_desktop_config.json
     ~/.claude/CLAUDE.md:
-      create: true
       path: app/claude/CLAUDE.md
     ~/.config/mcphub/servers.json:
-      create: true
       path: app/mcphub/servers.json
     ~/.cursor/mcp.json:
-      create: true
       path: app/cursor/mcp.json
 
     # others
     ~/.config/bat:
-      create: true
       path: app/bat
     ~/.config/btop:
-      create: true
       path: app/btop
     ~/Taskfile.yml:
-      create: true
       path: Taskfile.yml
 
     # cachyos
     ~/.config/elephant/snippets.toml:
-      create: true
       force: true
       path: cachyos/elephant/snippets.toml
     /etc/keyd/default.conf: # (sudo権限が必要)
-      create: true
       force: true
       path: cachyos/keyd/default.conf
     ~/.config/hypr/custom/keybinds.conf:
-      create: true
       force: true
       path: cachyos/hypr/keybinds.conf
     ~/.config/fontconfig/conf.d:
-      create: true
       force: true
       path: cachyos/fontconfig/conf.d
 
