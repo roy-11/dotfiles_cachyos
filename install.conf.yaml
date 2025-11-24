@@ -71,6 +71,9 @@
     ~/.config/fontconfig/conf.d:
       force: true
       path: cachyos/fontconfig/conf.d
+    ~/.config/espanso:
+      force: true
+      path: cachyos/espanso
 
 - shell:
     - command: ./setup_fish.sh
