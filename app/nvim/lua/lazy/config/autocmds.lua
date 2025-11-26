@@ -13,7 +13,8 @@ vim.api.nvim_create_autocmd("InsertLeave", {
   desc = "ノーマルモードに戻るとき英数入力にする",
   pattern = "*",
   callback = function()
-    vim.fn.jobstart({ "/opt/homebrew/bin/im-select", "com.apple.keylayout.ABC" }, { detach = true })
+    -- fcitx5で英数入力に切り替え
+    vim.fn.jobstart({ "fcitx5-remote", "-c" }, { detach = true })
   end,
 })
 

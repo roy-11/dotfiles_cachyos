@@ -7,6 +7,22 @@ echo "[System] Update"
 sudo pacman -Syyu
 
 # -------------------------------------------
+# VS code
+# -------------------------------------------
+yay -S visual-studio-code-bin
+
+# -------------------------------------------
+# Espanso (snippets tool)
+# -------------------------------------------
+git clone https://github.com/espanso/espanso # Clone the Espanso repository
+cd espanso
+cargo build -p espanso --release --no-default-features --features modulo,vendored-tls,wayland # Compile espanso in release mode
+sudo mv target/release/espanso /usr/local/bin/espanso # https://espanso.org/docs/install/linux/#installing-espanso-1
+sudo setcap "cap_dac_override+p" $(which espanso)
+espanso service register # Register espanso as a systemd service (required only once)
+espanso start
+
+# -------------------------------------------
 # Git Delta / Bat / Lazygit
 # -------------------------------------------
 sudo pacman -S git-delta bat
