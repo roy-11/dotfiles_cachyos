@@ -1,0 +1,5 @@
+/* https://forum.vivaldi.net/topic/95334/disable-title-bar/7 */
+#header,
+#titlebar {
+  display: none !important;
+}
