@@ -66,9 +66,7 @@ cd hdrop && make install && cd -
 # anki
 # -------------------------------------------
 # https://apps.ankiweb.net/
-# tar xaf Downloads/anki-2XXX-linux-qt6.tar.zst
-# cd anki-2XXX-linux-qt6
-# sudo ./install.sh
+yay -S anki # 日本語
 
 # -------------------------------------------
 # Flatpak

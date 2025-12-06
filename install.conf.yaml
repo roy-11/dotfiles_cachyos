@@ -74,6 +74,12 @@
     ~/.config/espanso:
       force: true
       path: cachyos/espanso
+    ~/.config/cava/config:
+      path: app/cava/config
+    ~/obsidian_git/.obsidian.vimrc:
+      force: true
+      create: true
+      path: app/obsidian/.obsidian.vimrc
 
 - shell:
     - command: ./setup_fish.sh

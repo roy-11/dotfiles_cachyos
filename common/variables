@@ -21,6 +21,8 @@ export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
 # bat テーマを適用
 export BAT_THEME=tokyonight_night
 
+export EDITOR='nvim'
+
 # moddableの設定
 # export IDF_PATH="$HOME/.local/share/esp32/esp-idf"
 # export MODDABLE="$HOME/App/03_private/moddable"

@@ -66,3 +66,5 @@ alias pwdc='pwd | tr -d "\n" | pbcopy'
 alias delss='find ~/Screenshots -type f -name "スクリーン*" -print0 -or -name "Clean*" -print0 | xargs -0 rm'
 alias typing='ttyper'
 alias task='task -g'
+alias lssh='lazyssh'
+alias qrestart='pkill qs; qs -c ii &';
