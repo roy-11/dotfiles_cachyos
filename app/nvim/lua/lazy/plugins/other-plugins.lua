@@ -1,5 +1,14 @@
 return {
-  { "inkarkat/vim-ReplaceWithRegister" },
+  {
+    "mg979/vim-visual-multi",
+    init = function()
+      t = {}
+      t["Find Under"] = "<C-S-d>"
+      t["Find Subword Under"] = "<C-S-d>"
+      vim.g.VM_maps = t
+    end,
+  },
+  { "inkarkat/vim-ReplaceWithRegister" }, -- visual →gr : https://github.com/LazyVim/LazyVim/discussions/1371
   {
     "andrewferrier/debugprint.nvim",
     opts = {

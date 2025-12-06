@@ -28,14 +28,19 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.toml" }, -- 追加：toml
     { import = "lazyvim.plugins.extras.lang.sql" }, -- 追加：sql
     { import = "lazyvim.plugins.extras.lang.prisma" }, -- 追加：prisma
+    { import = "lazyvim.plugins.extras.util.dot" }, -- .env, .conf
 
-    -- Editor
+    -- Other Recommended
     { import = "lazyvim.plugins.extras.editor.inc-rename" },
     { import = "lazyvim.plugins.extras.editor.dial" },
-    -- UI
-    -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
-    { import = "lazyvim.plugins.extras.util.dot" },
-    { import = "lazyvim.plugins.extras.ai.copilot" },
+    { import = "lazyvim.plugins.extras.coding.yanky" },
+    { import = "lazyvim.plugins.extras.util.mini-hipatterns" },
+
+    -- Git
+    { import = "lazyvim.plugins.extras.util.gh" },
+
+    -- AI
+    { import = "lazyvim.plugins.extras.ai.copilot" }, -- goast suggest
 
     -- import/override with your plugins
     { import = "plugins" },
