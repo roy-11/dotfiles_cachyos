@@ -30,6 +30,11 @@ bat cache --build
 sudo pacman -S lazygit
 
 # -------------------------------------------
+# Devtoys
+# -------------------------------------------
+yay -S devtoys-bin
+
+# -------------------------------------------
 # Rust → setup_rust.sh
 # -------------------------------------------
 
@@ -75,11 +80,12 @@ sudo pacman -S flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # -------------------------------------------
-# Slack, LocalSend, beekeeper ...
+# Slack, LocalSend, beekeeper, mycli ...
 # -------------------------------------------
 yay -S slack-desktop-wayland
 yay -S beekeeper-studio
 yay -S localsend-bin
+yay -S mycli
 # sudo iptables -L
 # sudo iptables -A INPUT -p udp --dport 53317 -j ACCEPT
 # sudo iptables -A INPUT -p tcp --dport 53317 -j ACCEPT
