@@ -105,8 +105,7 @@ sudo pacman -S clamav clamtk
 # Screenshot tool
 # -------------------------------------------
 # https://flameshot.org/docs/guide/wayland-help/#can-t-screen-anything-on-wayland-hyprland
-sudo pacman -S flameshot
-flameshot config # use grim
+yay -S flameshot-git
 
 # -------------------------------------------
 # Cursor (AppImage recommended)
