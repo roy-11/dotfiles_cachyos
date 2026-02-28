@@ -1,3 +1,6 @@
+# 非対話シェルでは何もしない（VSCode拡張機能Remote-SSHなど）
+status is-interactive; or return
+
 # 共通設定
 source ~/.aliases
 source ~/.variables
