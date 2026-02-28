@@ -6,6 +6,10 @@
 echo "[System] Update"
 sudo pacman -Syyu
 
+# aws cli setting
+yay -S aws-cli-bin
+yay -S aws-session-manager-plugin
+
 # -------------------------------------------
 # VS code
 # -------------------------------------------
@@ -178,7 +182,15 @@ sudo pacman -S libreoffice-fresh  # office
 sudo pacman -S spotify-launcher # spotify
 yay -S google-chrome # chrome
 yay -S obsidian # obisidian
+
+# -------------------------------------------
+# tailscale
+# -------------------------------------------
 sudo pacman -S tailscale # tailscale
+# sudo systemctl enable tailscaled
+# sudo systemctl enable sshd
+# taildrop receive folder
+# sudo tailscale file get ~/Downloads
 
 # -------------------------------------------
 # Fonts / IME
