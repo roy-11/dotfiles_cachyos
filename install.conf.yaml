@@ -71,6 +71,9 @@
     ~/.config/fontconfig/conf.d:
       force: true
       path: cachyos/fontconfig/conf.d
+    /etc/modprobe.d: # (sudo権限が必要)
+      force: true
+      path: cachyos/modprobe.d
     ~/.config/espanso:
       force: true
       path: cachyos/espanso
@@ -80,6 +83,10 @@
       force: true
       create: true
       path: app/obsidian/.obsidian.vimrc
+    ~/.config/illogical-impulse/config.json:
+      force: true
+      create: true
+      path: cachyos/illogical-impulse/config.json
 
 - shell:
     - command: ./setup_fish.sh
