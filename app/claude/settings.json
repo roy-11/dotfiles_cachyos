@@ -1,6 +1,127 @@
 {
   "permissions": {
-    "allow": ["Bash(npm run lint)", "Bash(npm run test:*)"]
+    "allow": [
+      "Bash(npm run lint)",
+      "Bash(yarn graphql:*)",
+      "Bash(yarn client:*)",
+      "Bash(ls:*)",
+      "Bash(read f:*)",
+      "Bash(gh pr:*)",
+      "Bash(grep:*)",
+      "mcp__github__issue_read",
+      "mcp__github__pull_request_read",
+      "mcp__github__get_file_contents",
+      "mcp__plugin_context7_context7__resolve-library-id",
+      "mcp__plugin_context7_context7__query-docs",
+      "mcp__figma__get_design_context",
+      "mcp__figma__get_screenshot",
+      "mcp__figma__get_metadata"
+    ],
+    "deny": [
+      "Bash(git push -f *)",
+      "Bash(git push --force *)",
+      "Bash(git reset --hard *)",
+      "Bash(git checkout .)",
+      "Bash(git clean -f *)",
+      "Bash(git add .)",
+      "Bash(git add -A)",
+
+      "Bash(rm -rf *)",
+      "Bash(rm -r *)",
+
+      "Bash(chmod 777 *)",
+      "Bash(chmod -R *)",
+      "Bash(chown -R *)",
+      "Bash(killall *)",
+      "Bash(pkill *)",
+      "Bash(kill -9 *)",
+
+      "Bash(sudo *)",
+      "Bash(su *)",
+      "Bash(curl *|*sh)",
+      "Bash(wget *|*sh)",
+
+      "Bash(ssh *)",
+      "Bash(scp *)",
+      "Bash(rsync *)",
+
+      "Bash(npm publish *)",
+      "Bash(yarn publish *)",
+      "Bash(pnpm publish *)",
+      "Bash(*deploy*)",
+
+      "Bash(open *)",
+      "Bash(osascript *)",
+      "Bash(defaults write *)",
+
+      "Bash(terraform apply *)",
+      "Bash(terraform destroy *)",
+      "Bash(kubectl apply *)",
+      "Bash(kubectl delete *)",
+      "Bash(helm install *)",
+      "Bash(helm upgrade *)",
+      "Bash(docker push *)",
+      "Bash(aws * --no-cli-pager)",
+      "Bash(gcloud * --quiet)",
+
+      "Read(.env)",
+      "Read(.env.*)",
+      "Read(**/*.pem)",
+      "Read(**/*.key)",
+      "Read(**/credentials*)",
+      "Read(**/secrets*)",
+      "Write(.env)",
+      "Write(.env.*)",
+      "Write(**/*.pem)",
+      "Write(**/*.key)",
+      "Write(**/credentials*)",
+      "Write(**/secrets*)",
+      "Edit(.env)",
+      "Edit(.env.*)",
+      "Edit(**/*.pem)",
+      "Edit(**/*.key)",
+      "Edit(**/credentials*)",
+      "Edit(**/secrets*)"
+    ],
+    "ask": [
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(npm install *)",
+      "Bash(yarn install *)",
+      "Bash(pip install *)",
+      "Bash(brew install *)",
+      "Bash(psql *)",
+      "Bash(mysql *)",
+      "Bash(mongosh *)",
+      "Bash(sqlite3 *)"
+    ],
+    "defaultMode": "default"
   },
-  "env": {}
+  "effortLevel": "high",
+  "theme": "dark-daltonized",
+  "editorMode": "vim",
+  "preferredNotifChannel": "kitty",
+  "autoCompactEnabled": false,
+  "remoteControlAtStartup": false,
+  "sandbox": {
+    "enabled": true,
+    "autoAllowBashIfSandboxed": true,
+    "filesystem": {
+      "denyRead": ["~/.ssh", "~/.gnupg", "~/.aws", "~/.config/gcloud"]
+    }
+  },
+  "enabledPlugins": {
+    "context7@claude-plugins-official": true,
+    "playwright@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true,
+    "code-simplifier@claude-plugins-official": true
+  },
+  "mcpServers": {
+    "github": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+    }
+  }
 }
