@@ -41,6 +41,7 @@ require("lazy").setup({
 
     -- AI
     { import = "lazyvim.plugins.extras.ai.copilot" }, -- goast suggest
+    { import = "lazyvim.plugins.extras.ai.claudecode" },
 
     -- import/override with your plugins
     { import = "plugins" },

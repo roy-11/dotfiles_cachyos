@@ -57,6 +57,8 @@
       path: app/btop
     ~/Taskfile.yml:
       path: Taskfile.yml
+    ~/.config/posting:
+      path: app/posting
 
     # cachyos
     ~/.config/elephant/snippets.toml:

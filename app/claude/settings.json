@@ -23,11 +23,6 @@
       "Bash(git reset --hard *)",
       "Bash(git checkout .)",
       "Bash(git clean -f *)",
-      "Bash(git add .)",
-      "Bash(git add -A)",
-
-      "Bash(rm -rf *)",
-      "Bash(rm -r *)",
 
       "Bash(chmod 777 *)",
       "Bash(chmod -R *)",
@@ -85,6 +80,8 @@
     ],
     "ask": [
       "Bash(git add *)",
+      "Bash(rm -rf *)",
+      "Bash(rm -r *)",
       "Bash(git commit *)",
       "Bash(git push *)",
       "Bash(npm install *)",
